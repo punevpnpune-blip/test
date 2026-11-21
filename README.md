@@ -1,6 +1,6 @@
 # CloudStream Adult Extensions
 
-Independent Kotlin modules for SupJav and SexTB, targeting the CloudStream 4.9.1 Android app. The modules currently register provider identities and are marked down in the plugin index. Homepage browsing, pagination, search, metadata, posters, and playback are pending for both providers.
+Independent Kotlin modules for SupJav and SexTB, targeting the CloudStream 4.9.1 Android app. The modules currently register provider identities and are marked available in newly generated plugin indexes. Homepage browsing, pagination, search, metadata, posters, and playback are pending for both providers.
 
 ## Build
 
@@ -35,7 +35,7 @@ The publishing job uses GitHub Actions’ built-in token with `contents: write`.
    https://raw.githubusercontent.com/OWNER/REPOSITORY/builds/repo.json
    ```
 
-3. Open the added repository. Use the app’s NSFW category settings if you are an adult and the entries are hidden. The current entries are development scaffolds marked down, so they may be unavailable in the app and have no browse or playback functionality.
+3. Open the added repository. Use the app’s NSFW category settings if you are an adult and the entries are hidden. The entries are development scaffolds with no browse or playback functionality.
 
 ## Verification status
 

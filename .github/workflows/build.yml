@@ -60,11 +60,13 @@ jobs:
           pattern: '*-cs3'
           path: packages
           merge-multiple: true
-      - name: Validate packages and assemble the repository index
+      - name: Assemble the repository index
         run: |
           mkdir dist
           cp packages/SupJav.cs3 packages/SexTB.cs3 dist/
           python3 .github/scripts/stage_repository.py dist packages/SupJav.json packages/SexTB.json
+      - name: Validate repository manifests and packages
+        run: python3 .github/scripts/validate_repository.py dist
       - uses: actions/upload-artifact@v4
         with:
           name: cloudstream-repository

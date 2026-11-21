@@ -4,7 +4,7 @@ Independent Kotlin modules for SupJav and SexTB, targeting the CloudStream 4.9.1
 
 ## Build
 
-Install JDK 17, Gradle 9.3.1, Android SDK Platform 35, and Build Tools 36.0.0. Set `ANDROID_HOME` to your SDK directory or set `sdk.dir` in an untracked `local.properties` file.
+Install JDK 17, Gradle 8.12, Android SDK Platform 35, and Build Tools 34.0.0. Set `ANDROID_HOME` to your SDK directory or set `sdk.dir` in an untracked `local.properties` file.
 
 ```sh
 gradle --no-daemon :SupJav:make :SexTB:make :makePluginsJson -PgithubRepository=OWNER/REPOSITORY
@@ -14,7 +14,7 @@ The CloudStream Gradle plugin writes `SupJav/build/SupJav.cs3`, `SexTB/build/Sex
 
 ## GitHub Actions
 
-CI uses Gradle's official setup action to install Gradle 9.3.1 directly. It installs Temurin JDK 17, Android SDK Platform 35, and Build Tools 36.0.0 on each runner. This repository uses the setup action in place of a Gradle wrapper. AGP 9.1.1 and Kotlin 2.4.0 match the pinned CloudStream Gradle plugin's build dependencies.
+CI uses Gradle's official setup action to install Gradle 8.12 directly. It installs Temurin JDK 17, Android SDK Platform 35, and Build Tools 34.0.0 on each runner. Gradle, AGP 8.7.3, Kotlin 2.3.0, and JDK 17 match the [official extensions repository](https://github.com/recloudstream/extensions). The CloudStream Gradle plugin is pinned to the JitPack build `81b1d424d2`, which provides the `writeCacheEntry` task used by CI.
 
 The SupJav and SexTB jobs run independently. Each reports its own result and uploads a provider-named artifact containing its CS3 and plugin index entry on success. The assembly job validates both packages, then uploads the combined repository artifact. Publishing requires successful assembly.
 

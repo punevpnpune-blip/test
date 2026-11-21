@@ -10,9 +10,10 @@ buildscript {
         maven("https://jitpack.io")
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:9.1.1")
-        classpath("com.github.recloudstream:gradle:32895aedb6366f5075cb99bbd2e6ce0a7cac325d")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.4.0")
+        classpath("com.android.tools.build:gradle:8.7.3")
+        // Pin a published JitPack build that registers writeCacheEntry.
+        classpath("com.github.recloudstream:gradle:81b1d424d2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.0")
     }
 }
 
@@ -24,6 +25,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven("https://jitpack.io")
     }
 }
 

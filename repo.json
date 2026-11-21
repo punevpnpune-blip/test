@@ -1,0 +1,8 @@
+{
+  "name": "CloudStream Adult Extensions",
+  "description": "SupJav and SexTB provider development builds",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/punevpnpune-blip/test/builds/plugins.json"
+  ]
+}
